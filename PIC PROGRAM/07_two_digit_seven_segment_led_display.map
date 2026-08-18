@@ -1,24 +1,27 @@
 MPLINK 4.48, Linker
-Linker Map File - Created Tue Aug 18 00:33:14 2026
+Linker Map File - Created Tue Aug 18 11:12:04 2026
 
                                  Section Info
                   Section       Type    Address   Location Size(Bytes)
                 ---------  ---------  ---------  ---------  ---------
                _entry_scn       code   0x000000    program   0x000006
                    .cinit    romdata   0x000006    program   0x000002
-.code_07_two_digit_seven_segment_led_display.o       code   0x000008    program   0x0001cc
-               _cinit_scn       code   0x0001d4    program   0x00009e
-                     PROG       code   0x000272    program   0x00005a
-                    .code       code   0x0002cc    program   0x000020
-             _startup_scn       code   0x0002ec    program   0x00001c
-           .code___init.o       code   0x000308    program   0x000002
-         .idata_c018i.o_i    romdata   0x00030a    program   0x000000
-         .romdata_c018i.o    romdata   0x00030a    program   0x000000
-            .code_c018i.o       code   0x00030a    program   0x000000
-.idata_07_two_digit_seven_segment_led_display.o_i    romdata   0x00030a    program   0x000000
-.romdata_07_two_digit_seven_segment_led_display.o    romdata   0x00030a    program   0x000000
-        .idata___init.o_i    romdata   0x00030a    program   0x000000
-        .romdata___init.o    romdata   0x00030a    program   0x000000
+.code_07_two_digit_seven_segment_led_display.o       code   0x000008    program   0x00023c
+                     PROG       code   0x000244    program   0x0000a6
+               _cinit_scn       code   0x0002ea    program   0x00009e
+         .code_fxd1616u.o       code   0x000388    program   0x00002c
+                    .code       code   0x0003b4    program   0x000020
+             _startup_scn       code   0x0003d4    program   0x00001c
+           .code___init.o       code   0x0003f0    program   0x000002
+.romdata_07_two_digit_seven_segment_led_display.o    romdata   0x0003f2    program   0x000000
+.idata_07_two_digit_seven_segment_led_display.o_i    romdata   0x0003f2    program   0x000000
+            .code_c018i.o       code   0x0003f2    program   0x000000
+      .idata_fxd1616u.o_i    romdata   0x0003f2    program   0x000000
+      .romdata_fxd1616u.o    romdata   0x0003f2    program   0x000000
+         .romdata_c018i.o    romdata   0x0003f2    program   0x000000
+        .idata___init.o_i    romdata   0x0003f2    program   0x000000
+        .romdata___init.o    romdata   0x0003f2    program   0x000000
+         .idata_c018i.o_i    romdata   0x0003f2    program   0x000000
                 MATH_DATA      udata   0x000000       data   0x000014
                  .tmpdata      udata   0x000014       data   0x000004
            .udata_c018i.o      udata   0x000060       data   0x00000a
@@ -27,6 +30,8 @@ Linker Map File - Created Tue Aug 18 00:33:14 2026
 .idata_07_two_digit_seven_segment_led_display.o      idata   0x00006a       data   0x000000
           .idata___init.o      idata   0x00006a       data   0x000000
           .udata___init.o      udata   0x00006a       data   0x000000
+        .idata_fxd1616u.o      idata   0x00006a       data   0x000000
+        .udata_fxd1616u.o      udata   0x00006a       data   0x000000
                    .stack      udata   0x000500       data   0x000100
               SFR_BANKED0      udata   0x000d60       data   0x00000c
               SFR_BANKED1      udata   0x000d70       data   0x00000c
@@ -49,36 +54,46 @@ Linker Map File - Created Tue Aug 18 00:33:14 2026
                               Program Memory Usage 
                                Start         End      
                            ---------   ---------      
-                            0x000000    0x000309      
-            778 out of 33048 program addresses used, program memory utilization is 2%
+                            0x000000    0x0003f1      
+            1010 out of 33048 program addresses used, program memory utilization is 3%
 
 
 
                               Symbols - Sorted by Name
                      Name    Address   Location    Storage File                     
                 ---------  ---------  ---------  --------- ---------                
+                   D1616S   0x000266    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x000274    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x000270    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x000286    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x000256    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
                     Delay   0x000008    program     extern C:\Users\admin\Desktop\116microcontrollers\PIC 18 F\PIC PROGRAM\07_two_digit_seven_segment_led_display.c
-                 FXM1616S   0x000272    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-               TSIGN1616A   0x0002be    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                 FXD1616S   0x000244    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXD1616U   0x000388    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                 FXM1616S   0x000290    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x0002dc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+       ___return_lbl00000   0x0003b2    program     static                          
        ___return_lbl00000   0x000004    program     static                          
-       ___return_lbl00001   0x000306    program     static                          
-       ___return_lbl00002   0x000270    program     static                          
-                   __init   0x000308    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
-            __zero_memory   0x0002cc    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                _do_cinit   0x0001d4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+       ___return_lbl00001   0x0003ee    program     static                          
+       ___return_lbl00002   0x000386    program     static                          
+                   __init   0x0003f0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+            __zero_memory   0x0003b4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                _do_cinit   0x0002ea    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
                    _entry   0x000000    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                 _startup   0x0002ec    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                compare_l   0x0002e2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                copy_loop   0x000246    program     static                          
-            copy_one_byte   0x00024c    program     static                          
-                     done   0x000270    program     static                          
-             done_copying   0x00025a    program     static                          
-                     loop   0x0002fc    program     static                          
-                   loop_h   0x0002da    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                   loop_l   0x0002e4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                 _startup   0x0003d4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                compare_l   0x0003ca    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                copy_loop   0x00035c    program     static                          
+            copy_one_byte   0x000362    program     static                          
+                     done   0x000386    program     static                          
+             done_copying   0x000370    program     static                          
+                  endloop   0x0003ae    program     static                          
+                     loop   0x000392    program     static                          
+                     loop   0x0003e4    program     static                          
+                   loop_h   0x0003c2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                   loop_l   0x0003cc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                      main   0x000090    program     extern C:\Users\admin\Desktop\116microcontrollers\PIC 18 F\PIC PROGRAM\07_two_digit_seven_segment_led_display.c
-                     test   0x0001ee    program     static                          
-               zero_block   0x0002da    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                     test   0x000304    program     static                          
+               zero_block   0x0003c2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                    ADCON0   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                ADCON0bits   0x000fc2       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
                    ADCON1   0x000fc1       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
@@ -858,24 +873,34 @@ Linker Map File - Created Tue Aug 18 00:33:14 2026
        ___return_lbl00000   0x000004    program     static                          
                     Delay   0x000008    program     extern C:\Users\admin\Desktop\116microcontrollers\PIC 18 F\PIC PROGRAM\07_two_digit_seven_segment_led_display.c
                      main   0x000090    program     extern C:\Users\admin\Desktop\116microcontrollers\PIC 18 F\PIC PROGRAM\07_two_digit_seven_segment_led_display.c
-                _do_cinit   0x0001d4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     test   0x0001ee    program     static                          
-                copy_loop   0x000246    program     static                          
-            copy_one_byte   0x00024c    program     static                          
-             done_copying   0x00025a    program     static                          
-       ___return_lbl00002   0x000270    program     static                          
-                     done   0x000270    program     static                          
-                 FXM1616S   0x000272    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-               TSIGN1616A   0x0002be    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
-            __zero_memory   0x0002cc    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-               zero_block   0x0002da    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                   loop_h   0x0002da    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                compare_l   0x0002e2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                   loop_l   0x0002e4    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
-                 _startup   0x0002ec    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
-                     loop   0x0002fc    program     static                          
-       ___return_lbl00001   0x000306    program     static                          
-                   __init   0x000308    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
+                 FXD1616S   0x000244    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  DA1616S   0x000256    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                   D1616S   0x000266    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 D1616SOK   0x000270    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                D1616SNEG   0x000274    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                  D1616SX   0x000286    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616s.asm
+                 FXM1616S   0x000290    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+               TSIGN1616A   0x0002dc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxm1616s.asm
+                _do_cinit   0x0002ea    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     test   0x000304    program     static                          
+                copy_loop   0x00035c    program     static                          
+            copy_one_byte   0x000362    program     static                          
+             done_copying   0x000370    program     static                          
+                     done   0x000386    program     static                          
+       ___return_lbl00002   0x000386    program     static                          
+                 FXD1616U   0x000388    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\fxd1616u.c
+                     loop   0x000392    program     static                          
+                  endloop   0x0003ae    program     static                          
+       ___return_lbl00000   0x0003b2    program     static                          
+            __zero_memory   0x0003b4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                   loop_h   0x0003c2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+               zero_block   0x0003c2    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                compare_l   0x0003ca    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                   loop_l   0x0003cc    program     static E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\proc\p18f4580.asm
+                 _startup   0x0003d4    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\startup\c018i.c
+                     loop   0x0003e4    program     static                          
+       ___return_lbl00001   0x0003ee    program     static                          
+                   __init   0x0003f0    program     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\stdclib\__init.c
                      SIGN   0x000000       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
             __FPFLAGSbits   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
                 __FPFLAGS   0x000001       data     extern E:\c18v3.46\pic18-lt\cxx-framework\src\traditional\math\cmath18.asm
