@@ -5,10 +5,12 @@
 
 void Delay(int a)
 {
-    int i,j;
+    int i, j;
 
-    for(i=0;i<a;i++)
-        for(j=0;j<255;j++);
+    for(i = 0; i < a; i++)
+    {
+        for(j = 0; j < 255; j++);
+    }
 }
 
 void main(void)
@@ -19,6 +21,7 @@ void main(void)
     };
 
     int temp;
+    int i;
 
     TRISC = 0X00;
 
@@ -27,25 +30,27 @@ void main(void)
 
     while(1)
     {
-        // Tens digit = 7
-        temp = 73 / 10;
+        for(i = 0; i < 100; i++)
+        {
+            // Tens digit
+            temp = i / 10;
 
-        S1 = 0;
-        S2 = 1;
+            S1 = 1;
+            S2 = 0;
 
-        PORTC = Arr[temp];
+            PORTC = Arr[temp];
 
-        Delay(50);
+            Delay(100);
 
-        // Units digit = 3
-        temp = 73 % 10;
+            // Units digit
+            temp = i % 10;
 
-        S1 = 1;
-        S2 = 0;
+            S1 = 0;
+            S2 = 1;
 
-        PORTC = Arr[temp];
+            PORTC = Arr[temp];
 
-        Delay(50);
+            Delay(100);
+        }
     }
 }
-			
