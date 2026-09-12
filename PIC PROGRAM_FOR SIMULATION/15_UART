@@ -1,0 +1,33 @@
+```c
+#include<p18f4580.h>
+
+void Delay(int a)
+{
+    int i,j;
+    for(i=0;i<a;i++)
+        for(j=0;j<i;j++);
+}
+
+void main()
+{
+    //Dec -->No
+    //Dir
+    TRISCbits.RC6=1;//Set as TX
+    TRISCbits.RC7=0;//Set as Rc
+
+    //Other Init
+    TXSTA = 0x24;
+    RCSTA = 0x90;
+    SPBRG = 0x19;
+
+    while(1)
+    {
+        TXREG = 'a';
+        while(PIR1bits.TXIF == 0);//wait for TX
+        PIR1bits.TXIF = 0; //Flag Bit Clear
+        Delay(500);
+    }
+}
+```
+
+	
