@@ -1,0 +1,90 @@
+#include <p18f4580.h>
+
+#define RS PORTCbits.RC0
+#define RW PORTCbits.RC1
+#define EN PORTCbits.RC2
+
+void Delay(int a)
+{
+    int i, j;
+
+    for(i = 0; i < a; i++)
+    {
+        for(j = 0; j < 100; j++);
+    }
+}
+
+void LCD_Data(char val)
+{
+    PORTD = val;
+
+    RS = 1;
+    RW = 0;
+    EN = 1;
+
+    Delay(100);
+
+    EN = 0;
+}
+
+void LCD_Cmd(char val)
+{
+    PORTD = val;
+
+    RS = 0;
+    RW = 0;
+    EN = 1;
+
+    Delay(100);
+
+    EN = 0;
+}
+
+void string(const rom char *s)
+{
+    while(*s != '\0')
+    {
+        LCD_Data(*s++);
+    }
+}
+
+void main(void)
+{
+    // Direction
+    TRISD = 0x00;              // LCD Data Pins as Output
+    TRISCbits.RC0 = 0;         // RS as Output
+    TRISCbits.RC1 = 0;         // RW as Output
+    TRISCbits.RC2 = 0;         // EN as Output
+
+    // LCD Initialization
+    LCD_Cmd(0x38);             // 8-bit mode, 2 lines, 5x7 matrix
+    LCD_Cmd(0x0F);             // Display ON, Cursor ON, Blink ON
+    LCD_Cmd(0x01);             // Clear Display
+    LCD_Cmd(0x06);             // Increment Cursor
+    LCD_Cmd(0x80);             // Cursor at Row 1, Column 1
+
+    while(1)
+    {
+        // Display RICHY / RICH
+        LCD_Cmd(0x83);
+        string("RICHY");
+
+        LCD_Cmd(0xC3);
+        string("RICH");
+
+        Delay(500);
+
+        LCD_Cmd(0x01);         // Clear Display
+
+        // Display FC Road / Pune
+        LCD_Cmd(0x83);
+        string("FC Road");
+
+        LCD_Cmd(0xC3);
+        string("Pune");
+
+        Delay(500);
+
+        LCD_Cmd(0x01);         // Clear Display
+    }
+}
