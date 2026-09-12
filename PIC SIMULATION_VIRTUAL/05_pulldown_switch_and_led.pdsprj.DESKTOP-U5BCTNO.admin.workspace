@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c00000002000000020000000083ffff0083ffffffffffffffffffffb90000000c000000c7060000f0030000</PLACEMENT>
+  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffffb90000000c000000c7060000f0030000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -21,7 +21,7 @@
    <POPUP w="8" x="168" flags="0000000a" y="252" h="32" pid="4" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="188" flags="80000002" y="272" h="16" pid="12" iid="1">
+   <POPUP w="8" x="188" flags="00000000" y="272" h="16" pid="12" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="208" flags="0000000a" y="292" h="32" pid="6" iid="1">
@@ -36,7 +36,7 @@
    <POPUP w="18" x="268" flags="00000008" y="352" h="32" pid="10" iid="1">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="8" x="288" flags="80000002" y="372" h="8" pid="13" iid="1">
+   <POPUP w="8" x="288" flags="00000000" y="372" h="8" pid="13" iid="1">
     <PROPERTIES/>
    </POPUP>
   </PWI>
